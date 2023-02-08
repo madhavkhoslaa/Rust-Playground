@@ -1,9 +1,21 @@
-use rust_playground::SerdePlayground::person::Person;
+mod Box;
 mod SerdePlayground;
 mod linkedlist;
+mod RC;
+
 fn main() {
-    print!("Serde Playground");
+    println!("Serde Playground");
     SerdePlayground::run::run();
-    print!("Linkedlist Playground");
+    println!("___________________________________________");
+    println!("Linkedlist Playground");
     linkedlist::run::run();
+    println!("___________________________________________");
+    println!("Run Box Playground");
+    Box::Box::RunBox();
+    println!("___________________________________________");
+    println!("Run Box Playground");
+    Box::run::run();
+    println!("___________________________________________");
+    println!("Run Box Playground");
+    RC::rc::run();
 }

@@ -1,5 +1,3 @@
-
-
 // Serde with attributes
 // Using defaults
 // deta format key names
@@ -12,10 +10,7 @@
 // Variant attributes => Applied to a varient of an enum
 // Field attributes => apply to field in a struct or an enum
 
-use serde::{Serialize, Deserialize};
-
-
-
+use serde::{Deserialize, Serialize};
 
 /**
  * #[derive(Serialize, Deserialize)]
@@ -33,9 +28,8 @@ enum E {
 }
  */
 
-
 #[derive(Serialize, Deserialize, Debug)]
-#[serde(rename_all(serialize= "UPPERCASE", deserialize = "UPPERCASE"))]
+#[serde(rename_all(serialize = "UPPERCASE", deserialize = "UPPERCASE"))]
 pub struct Employee {
     pub name: String,
     pub age: u8,
@@ -43,8 +37,7 @@ pub struct Employee {
     pub salary: u16,
     pub team: Team,
     #[serde(skip)]
-    pub tax_number: String
-    // this does not log tax number
+    pub tax_number: String, // this does not log tax number
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -55,5 +48,5 @@ pub enum Team {
     QA,
     SALES,
     MARKETING,
-    HOUSEKEEPING
+    HOUSEKEEPING,
 }
