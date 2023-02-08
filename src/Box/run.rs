@@ -1,9 +1,9 @@
 use super::MyBox;
 
-pub fn run(){
+pub fn run() {
     let mybox = MyBox::MyBox::new(String::from("MyBox"));
-    // Deref returns a refrence and not a value 
-    // Because we do not want to pass the ownership of the 
+    // Deref returns a refrence and not a value
+    // Because we do not want to pass the ownership of the
     // data to the place we are derefrrencing it
     // We dont want a "MOVE"
     println!("{:?}", *mybox);
@@ -16,10 +16,9 @@ pub fn run(){
     // If we want to drop one value before another
     // we can call the drop method
     drop(mybox);
-
 }
 
-fn sayWorrd(word: &str){
+fn sayWorrd(word: &str) {
     // deref coercion example
     // Deref corecion does not work from immutable to mutable
     println!("{:?}", word);

@@ -1,7 +1,7 @@
 mod Box;
+mod RC;
 mod SerdePlayground;
 mod linkedlist;
-mod RC;
 
 fn main() {
     println!("Serde Playground");

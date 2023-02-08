@@ -23,7 +23,7 @@ impl<T: std::cmp::PartialEq + std::clone::Clone + std::fmt::Display> Node<T> {
     //     let mut curr_node = self;
     //     loop {
     //         if idx_counter == idx {
-                
+
     //             break;
     //         }
     //         curr_node = self.clone().next.clone().unwrap().as_mut();

@@ -9,39 +9,32 @@ use std::rc::Rc;
 
 struct Node {
     value: i32,
-    Next: Option<Box<Node>>
+    Next: Option<Box<Node>>,
 }
 
 impl Node {
     pub fn new(value: i32, Next: Option<Box<Node>>) -> Node {
-        Node {
-            value,
-            Next
-        }
+        Node { value, Next }
     }
 }
 
 #[derive(Debug)]
 struct NodeRC {
     value: i32,
-    Next: Option<Rc<NodeRC>>
+    Next: Option<Rc<NodeRC>>,
 }
 
 impl NodeRC {
     pub fn new(value: i32, Next: Option<Rc<NodeRC>>) -> NodeRC {
-        NodeRC {
-            value,
-            Next
-        }
+        NodeRC { value, Next }
     }
 }
-impl Drop for NodeRC{
+impl Drop for NodeRC {
     fn drop(&mut self) {
         println!("Node is dropped {:?}", self);
     }
 }
-pub fn run(){
-   
+pub fn run() {
     // let a = Node::new(1, None);
     // let c = Node::new(1, Some(Box::new(a)));
     // let b = Node::new(1,Some(Box::new(a)));
@@ -61,5 +54,4 @@ pub fn run(){
 
     // Rc::clone does not create new copies of the data like other impls of clone
     // Shallow copy
-
 }
