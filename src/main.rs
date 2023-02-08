@@ -1,7 +1,8 @@
-mod Box;
-mod RC;
-mod SerdePlayground;
-mod linkedlist;
+use rust_playground::SerdePlayground;
+use rust_playground::linkedlist;
+use rust_playground::Box;
+use rust_playground::RC;
+
 
 fn main() {
     println!("Serde Playground");
